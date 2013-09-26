@@ -1,0 +1,22 @@
+{
+  "name": "growthtracker-website",
+  "description": "Website for GrowthTracker",
+  "author": "Matt Goldman <matt@smallhq.com>",
+  "subdomain": "growthtracker",
+  "domains": [
+    "growthtracker.io",
+    "www.growthtracker.io"
+  ],
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.x",
+    "winston": "0.6.x"
+  },
+  "scripts": {
+    "start": "server.js"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
