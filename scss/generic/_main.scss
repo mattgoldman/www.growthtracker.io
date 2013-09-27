@@ -46,3 +46,119 @@ hr {
 	border: none;
 	border-top: 1px solid #e8e8e8;
 }
+
+// Universal
+#logo, #logo a {
+	color: #DF5353;
+	font-family: 'freight-sans-pro', HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 25px;
+}
+
+footer {
+	color: #656771;
+	font-family: HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	line-weight: 20px;
+}
+
+// Links
+a {
+	color: #6281FA;
+	text-decoration: none;
+  cursor: pointer;
+}
+
+.login {
+  z-index: 9999;
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  font-size: 13px;
+  line-height: 17px;
+  font-family: HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #8C8E94;
+}
+
+// Forms
+form {
+	margin: 60px 0 150px;
+	text-align: center;
+
+	.nudge {
+		font-size: 13px;
+    line-height: 17px;
+		font-family: HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #8C8E94;
+		margin-top: 10px;
+	}
+
+	input {
+		display: inline !important;
+
+		&[type="submit"] {
+			margin-left: 10px;
+
+			@media only screen and (max-width: 480px) {
+				margin-left: 0px;
+				margin-top: 10px;
+			}
+		}
+	}
+
+	&#subFormTwo {
+		margin-bottom: 100px;
+	}
+
+	@media only screen and (max-width: 767px) {
+		margin-bottom: 50px;
+	}
+}
+
+input {
+	-webkit-appearance: none; /* Fix iOS styling */
+}
+
+input[type="text"] {
+	border: 2px solid #D3D9DD;
+	border-radius: 4px;
+	color: #8C8E94;
+	font-family: HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	outline: none;
+	padding: 8px 10px;
+
+	&:focus {
+		border-color: #C3C8CB;
+		border-radius: 4px;
+		color: #797B80;
+	}
+
+	&.invalid {
+		border-color: #DFA3A3;
+		color: #C77070;
+	}
+
+	&.valid {
+		border-color: #6FBCA2;
+		color: #6FA492;
+	}
+}
+
+input[type="submit"], input[type="button"] {
+	color: #FFF;
+	cursor: pointer;
+	background-color: #2FB499;
+	border: 0px;
+	border-radius: 4px;
+	font-family: HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	height: 37px;
+	outline: none;
+	padding: 0px 20px;
+	-webkit-font-smoothing: antialiased;
+
+	&:active {
+		background-color: #279F87;
+	}
+}
