@@ -1,50 +1,47 @@
-/*
-* Skeleton V1.2
-* Copyright 2011, Dave Gamache
-* www.getskeleton.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 6/20/2012
-* Modified by Matt Goldman on 11/13/2012
-*/
+@import "compass/typography/vertical_rhythm";
 
-/* #Reset & Basics (Inspired by E. Meyers)
-================================================== */
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-		margin: 0;
-		padding: 0;
-		border: 0;
-		font-size: 100%;
-		font: inherit;
-		vertical-align: baseline; }
-	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-		display: block; }
-	body {
-		line-height: 1;
-		overflow-y: scroll; }
-	ol, ul {
-		list-style: none; }
-	blockquote, q {
-		quotes: none; }
-	blockquote:before, blockquote:after,
-	q:before, q:after {
-		content: '';
-		content: none; }
-	table {
-		border-collapse: collapse;
-		border-spacing: 0; }
-	i, em {font-style: italic;}
-	b, strong {font-weight: bold;}
+@include establish-baseline;
 
-/* #Basic Styles
-================================================== */
-	body {
-		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-		-webkit-text-size-adjust: 100%;
- }
+* {
+	@include box-sizing(border-box);
+}
 
-/* #Images
-================================================== */
-	img.scale-with-grid {
-		max-width: 100%;
-		height: auto; }
+body {
+  background: $global-bg-color;
+  font-family: $font-family;
+  font-weight: $body-font-weight;
+  color: $body-font-color;
+  position: relative;
+  -webkit-font-smoothing: $font-smoothing;
+  @include respond(all-phones) {
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+.hide.active, .show {
+  display: block;
+}
+
+// .fixed elements will be static at supplied breakpoint
+// set arg to false for permanent .fixed elements
+@include fixed(portrait-tablets);
+
+.text-center { @extend %text-center; }
+.text-left { @extend %text-left; }
+.text-right { @extend %text-right; }
+
+// Partial to align Text Left or Right
+%text-center { text-align: center; }
+%text-left { text-align: left; }
+%text-right { text-align: right; }

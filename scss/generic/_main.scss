@@ -1,0 +1,48 @@
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.cl {
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+.ov {
+	overflow: hidden;
+}
+
+.dn {
+	display: none;
+}
+
+.sm-mar-lt {
+	margin-left: 5px;
+}
+
+.sm-mar-rt {
+	margin-right: 5px;
+}
+
+.lrg-mar-lt {
+	margin-left: 15px;
+}
+
+.lrg-mar-rt {
+	margin-right: 15px;
+}
+
+textarea {
+	font-family: "effra", sans-serif;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid #e8e8e8;
+}
