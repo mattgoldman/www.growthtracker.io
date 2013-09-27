@@ -1,6 +1,3 @@
-require 'modular-scale' 
-require 'sassy-math'
-
 # Tell compass where to find local extensions
 # If you followed directions and ran 'gem install modular-scale' comment the next two lines out:
 extensions_dir = "scss/extensions"
