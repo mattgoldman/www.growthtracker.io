@@ -1,3 +1,12 @@
+<!--NOTES FROM MICHAEL:
+  1. Write all the homepage styles in the themes/_homepage.scss
+  2. Any body styles or generic styles can be written in the theme/_general.scss
+  3. In generic/_main.scss I've got some basic helper classes - I try to create theme-able classes as we go along so we can write our html like:
+    <div class="bttn fr sm-mar-lt"> for a button that's float: right with a small margin left
+  4. If you write a button style put it into a mixin in a new file _mixins in the utilities folder
+  5. For gumby it defaults to twelve columns - looks like you write everything very much like skeleton 
+  -->
+
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -36,41 +45,103 @@
 			<header class="twelve columns">
 				<h1 id="logo">GrowthTracker</h1>
 			</header>
-		</div>	
+		</div>
 
 		<div class="row">
-			<div class="twelve columns">
+			<div class="twelve columns" id="headlines">
 				<h2>Set Goals. Unlock Growth.</h2>
 				<h4>Use the power of compounding growth to boost your business</h4>
 			</div>
 		</div>
-		
-		<form action="http://email.demandloyalty.com/t/r/s/trjyhjk/" method="post" id="subFormTwo">
-			<input type="text" name="cm-trjyhjk-trjyhjk" placeholder="Email Address" /><input type="submit" value="Reserve Your Spot" />
-			<!--<div class="nudge">Over 1,600 other people already have :-)<br>Invites now being sent daily...</div>-->
-		</form>
-		
+
+    <div class="row">
+      <div class="centered eleven columns" id="sign_up_form">
+        <form action="http://email.demandloyalty.com/t/r/s/trjyhjk/" method="post" id="subFormTwo">
+        	<input type="text" name="cm-trjyhjk-trjyhjk" placeholder="Your Email" /><input type="submit" value="Get Invited" />
+        			<!--<div class="nudge">Over 1,600 other people already have :-)<br>Invites now being sent daily...</div>-->
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="twelve columns" id="graph_headline">
+        <h3>Target 3% Weekly Growth</h3>
+      </div>
+    </div>
 		<div class="row">
-			<div class="twelve columns">
-				<!-- Large Image Here -->
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="six columns">
-				<!-- Text here for left column -->
-			</div>
-			<div class="six columns">
-				<!-- text here for right column -->
+			<div class="twelve columns" id="graph">
+				<img src="images/growth-tracker-graph.gif" width="1400" height="460">
 			</div>
 		</div>
 
-		<footer class="sixteen columns">
-			<div class="two columns">&nbsp;</div>
-			<div class="twelve columns">
+		<div class="row">
+      <div class="centered eleven columns">
+  			<div class="five columns" id="faqs_left">
+  				<h2>Common Growth Tracking Questions</h2>
+          <dt>Why does compound growth matter?</dt>
+          <dd>Paul Graham explains it best: "When I first meet founders and ask what their growth rate is, sometimes they tell me 'We get about a hundred new customers a month'. That's not a rate. What matters is <b>not</b> the absolute number of new customers, but the <i>ratio</i> of new customers to existing ones.<br><br> If you're really getting a constant number of new customers every month, you're in trouble, because that means your growth rate is actually <b>decreasing</b>."</dd>
+          <dt>Why is compound growth so powerful?</dt>
+          <dd>The beautiful thing about compound growth is that tiniest little changes can have HUGE long-term value. A company that grows at 1% a week will grow 1.7x a year.
+          <table border="1">
+            <tr>
+            <th>Weekly Growth Rate</th>
+            <th>Yearly Growth</th>
+            </tr>
+            <tr>
+            <td>1%</td>
+            <td>1.7x</td>
+            </tr>
+            <tr>
+            <td>2%</td>
+            <td>2.8x</td>
+            </tr>
+            <td>5%</td>
+            <td>12.6x</td>
+            </tr>
+            <tr>
+            <td>7%</td>
+            <td>33.7x</td>
+            </tr>
+            <tr>
+            <td>10%</td>
+            <td>142x</td>
+            </tr>
+          </table>
+          A company that grows at 5% a week will grow 12.6x in a single year. If you're making $1000 a month and growing at 3% a week, in one year you'll be making $4,650 a month. In 3 years, that number will be $100,602 a month. <i>That's the power of compounding.</i></dd>
+          <dt>What's considered a good growth rate?</dt>
+          <dd>This is really a company-specific question that you'll need to ask yourself. Crunch your own numbers and determine where to set the bar. But for a benchmark, Y-Combinator startups shoot for 5-7% a week. On average a more realistic goal would be 3% week over week. If you can only manage 1%, it may be a sign you have some bigger issues to address.</dd>
+        </div>
+
+  			<div class="push_one five columns" id="faqs_right">
+          <div id="growth_tracker_explained">
+            <dt>So what does Growth Tracker do exactly?</dt>
+            <dd>Growth Tracker allows you to integrate directly into your own app and start tracking anything you want. We handle all the calculations for compound growth based on what you tell us your goals are and display them in simple, clean, minimal graphs.</dd>
+            <dd>Growth Tracker tracker tells you exactly what you need to do each day to hit your goals for the week. Based on your progress your goals will be re-calculated on a daily and weekly basis to help keep you on track and on top of exactly what you need to know.</dd>
+            <dd>If you're running growth hacking experiements you'll be able to track the results and see how they affect your larger goals or your funnel in Growth Tracker. You can pinpoint exactly what has been effective and what hasn't.</dd>
+            <dd>You'll be able to look back at your data and see how your growth curve has changed over the long-term.</dd>
+            </dt>
+          </div>
+          <dt>What types of metrics should I measure?</dt>
+          <dd>You should be measuring metrics relevant to each stage of your funnel (Acquisition, Activation, Retention, Revenue) and trying to push as many customers through to revenue as possible. That said, the following metrics should not go un-tracked:
+          <ul>
+            <li>New users added / User growth rate</li>
+            <li>Cost of customer acquisition</li>
+            <li>Lifetime customer value / payback period</li>
+            <li>Number of active users (you'll need to define 'active' for yourself)</li>
+            <li>Revenue</li>
+            <li>Conversion rate to paid users</li>
+            <li>Churn rate</li>
+            <li>Burn rate</li>
+          </ul>
+          </dd>
+  			</div>
+      </div>
+		</div>
+
+		<footer class="row">
+			<div class="twelve columns" id="footer">
 				<p>GrowthTracker is a product of <a href="http://www.smallhq.com">Small HQ</a> and <a href="http://www.tinyfactory.co">Tiny Factory</a>.</p>
 			</div>
-			<div class="two columns">&nbsp;</div>
 		</footer>
 
 	</div><!-- .container -->
@@ -82,7 +153,7 @@
 	<script src="js/libs/gumby.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/plugins.js"></script>
-	
+
 	<!-- Google Analytics -->
 	<script type="text/javascript">
 	  var _gaq = _gaq || [];
