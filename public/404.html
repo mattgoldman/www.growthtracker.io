@@ -4,52 +4,76 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<title>404 Page Not Found | GrowthTracker</title>
+  <meta charset="utf-8">
+  <title>404 Page Not Found | GrowthTracker</title>
 
-	<!-- Meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="description" content="">
+  <!-- Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="">
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="/styles/styles.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/styles/web.css">
 
-	<script src="/scripts/jquery.js"></script>
-	<script src="/scripts/jquery.typer.js"></script>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+  <!-- TypeKit -->
+   <script type="text/javascript" src="//use.typekit.net/wry1xjb.js"></script>
+     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-	<!-- TypeKit -->
-	<script type="text/javascript" src="//use.typekit.net/oyn4mdj.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <!--Moderizer-->
+    <script src="js/plugins/modernizr-2.6.2.js"></script>
+
 </head>
 <body id="home">
 
-	<div class="container">
+  <div class="container">
 
-		<header class="sixteen columns">
-			<h1 id="logo">GrowthTracker</h1>
-		</header>
+    <!--<div class="login">Already Invited? <a href="https://secure.growthtracker.io/login">Login</a></div>-->
 
-		<h2 id="description">Page not found. <a href="/">Go to the home page</a></h2>
+      <div class="row">
+      <header class="twelve columns">
+        <h1 id="logo">GrowthTracker</h1>
+      </header>
+    </div>
 
-	</div><!-- .container -->
+    <div class="row">
+      <div class="twelve columns" id="headlines">
+        <h2>Page Not Found</h2>
+        <h4>Go to the <a href="/">home page</a></h4>
+      </div>
+    </div>
 
-	<!-- Google Analytics -->
-	<script type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-TODO']);
-	  _gaq.push(['_setDomainName', 'growthtracker.io']);
-	  _gaq.push(['_trackPageview']);
+    <footer class="row">
+      <div class="twelve columns" id="footer">
+        <p>GrowthTracker is a product of <a href="http://www.smallhq.com">Small HQ</a> and <a href="http://www.tinyfactory.co">Tiny Factory</a>.</p>
+      </div>
+    </footer>
 
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	</script>
-	<!-- END Google Analytics -->
+  </div><!-- .container -->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+
+  <!-- Gumby Framework -->
+  <script src="js/libs/gumby.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/plugins.js"></script>
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-TODO']);
+    _gaq.push(['_setDomainName', 'growthtracker.io']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!-- END Google Analytics -->
 </body>
 </html>
